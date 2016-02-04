@@ -65,6 +65,14 @@ module.exports = {
                                  res.end();
                              });
                           });
+
+                 rq.on('socket', function (socket) {
+                     socket.setTimeout(3000);  
+                     socket.on('timeout', function() {
+                         rq.abort();
+                     });
+                 });
+
                  rq.end();
 	}
 };
