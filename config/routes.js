@@ -36,7 +36,8 @@ module.exports.routes = {
     view: 'homepage'
   },
   '/jabongfit/widget': 'FitController.index',
-  '/jabongfit/widget/*': 'FitController.index'
+  '/jabongfit/widget/*': 'FitController.index',
+  '/jabongfit/*': 'FitController.index'
 
   /***************************************************************************
   *                                                                          *
